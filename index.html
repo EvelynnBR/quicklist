@@ -11,46 +11,58 @@
         <title>Lista de compras</title>
     </head>
     <body class="container content">
-        <head>
+        <header>
             <img class="desktop-only" src="assets/logo.svg" alt="logo Quicklist">
-        </head>
+        </header>
         <main>
-            <div>
+            <div class="flex gap-1">
                 <a href="#">
                     <img src="assets/back.svg" alt="voltar a pagina anterior">
                 </a>
                 <h1>Compras da semana</h1>
             </div>
             <section>
-                <div class="addItens">
+                <div class="additens flex gap-1">
                     <input type="text" name="item" id="item" required placeholder="Adicione um novo item">
                     <button class="btn-color">Adicionar item</button>
                 </div>
 
                 <ul rule="list" class="grid gap-075">
-                    <li class="listItem">
-                        <input type="checkbox">
+
+                    <li class="listItem flex">
+                        <div class="checked-img">
+                            <input type="checkbox">
+                        </div>
                         <p id="item">Pão de forma</p>
                         <button id="delete">
                             <img src="assets/delete.svg" alt="">
                         </button>
                     </li>
-                    <li class="listItem">
-                        <input type="checkbox">
+
+                    <li class="listItem flex">
+                        <div class="checked-img">
+                            <input type="checkbox">
+                        </div>
                         <p id="item">Café preto</p>
                         <button id="delete">
                             <img src="assets/delete.svg" alt="">
                         </button>
                     </li>
-                    <li class="listItem">
-                        <input type="checkbox">
+
+                    <li class="listItem flex">
+                        <div class="checked-img">
+                            <input type="checkbox">
+                        </div>
                         <p id="item">Suco de laranja</p>
                         <button id="delete">
                             <img src="assets/delete.svg" alt="">
                         </button>
                     </li>
-                    <li class="listItem">
-                        <input type="checkbox">
+
+                    <li class="listItem flex">
+                        <div class="checked-img">
+                            <input type="checkbox">
+                        </div>
                         <p id="item">Bolacha</p>
                         <button id="delete">
                             <img src="assets/delete.svg" alt="">
@@ -59,13 +71,14 @@
                 </ul>
 
                 <di id="alert">
-                    <div class="alert">
+                    <div class="alert flex">
                         <img src="assets/alert.svg" alt="">
                         <p>O item foi removido da lista</p>
-                        <img src="assets/delete-small.svg" alt="">
+                        <button>
+                            <img src="assets/delete-small.svg" alt="">
+                        </button>
                     </div>
                 </div>
-
             </section>
         </main>
     </body>

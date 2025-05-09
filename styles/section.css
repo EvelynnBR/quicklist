@@ -1,0 +1,121 @@
+header{
+    display: flex;
+    justify-content: center;
+    padding-block: 1.5rem 4rem;
+}
+
+main > div{
+    flex-direction: column;
+    margin-bottom: 2.75rem;
+}
+
+.additens{
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    justify-content: space-between;
+
+    & input{
+        padding: .75rem 1.125rem;
+        border: 2px solid var(--border-primary);
+        background-color: var(--bg-secondary);
+        border-radius: .75rem;
+        width: 100%;
+        
+        &::placeholder{
+            font: 500 1rem/1.4 var(--font-family);
+            color: var(--content-tertiary);
+        }
+    }
+    & button{
+        padding: .75rem 1.5rem;
+        color: var(--btn-color);
+        background-color: var(--btn);
+        border: none;
+        border-radius: .75rem;
+        cursor: pointer;
+
+
+        &:hover{
+            background-color: var(--btn-hover);
+        }
+    }
+}
+@media (width >= 80em){
+    .additens{
+        flex-direction: row;
+        & input{
+            width: 70%;
+        }
+    }
+}
+
+ul{
+    & li{
+        background-color: var(--bg-secondary);
+        padding: .5rem .75rem;
+        border-radius: .75rem;
+        
+        align-items: center;
+        
+        gap: .5rem;
+        
+        & .checked-img{
+            position: relative;
+            background: url(../assets/checked-defaut.svg) no-repeat;
+            padding: .6rem;
+            width: 1rem;
+            height: 1rem;
+            margin-block: auto;
+
+            &:hover{
+                background: url(../assets/checked-hover.svg) no-repeat; 
+            }
+
+            &:has(:checked){
+                background: url(../assets/checked.svg) no-repeat; 
+            }
+            
+            & input[type="checkbox"]{
+                position: absolute;
+                inset: 0;
+                left: 0;
+                top: 0;
+                cursor: pointer;
+
+                opacity: 0;
+    
+            }
+        }
+        & button{
+            margin-left: auto;
+            border: none;
+            background-color: var(--bg-secondary);
+            cursor: pointer;
+
+            & img{
+                width: 3rem;
+                height: 3rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.alert{
+    --alert-color: var(--bg-secondary);
+    margin-top: 2.5rem;
+    background-color: var(--alert);
+    gap: .75rem;
+    border-radius: .75rem;
+    color: var(--alert-color);
+    padding: .75rem;
+    margin-bottom: 4rem;
+
+    & button{
+        margin-left: auto;
+        border: none;
+        background-color: var(--alert);
+        cursor: pointer;
+    }
+}
