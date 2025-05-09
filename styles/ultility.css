@@ -1,0 +1,44 @@
+.container{
+    --max-width: 375px;
+    width: min(var(--max-width), 100% - var(--px-lg) * 2);
+    margin-inline: auto;
+}
+
+body{
+    border: solid;
+}
+
+.desktop-only{
+    display: none;
+}
+
+.content{
+    max-width: 39.25rem;
+}
+img{
+    max-width: 100%;
+}
+h1{
+    font: var(--h1);
+    color: var(--content-primary);
+}
+.btn-color{
+    font: var(--label);
+    color: var(--btn-color);
+}
+p{
+    font: var(--p);
+    color: var(--contet-secondary);
+}
+a{
+    text-decoration: none;
+}
+@media (width >= 80em){
+    .container{
+        --max-width: 80em;
+
+    }
+    .desktop-only{
+        display: initial;
+    }
+}
