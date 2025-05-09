@@ -51,7 +51,7 @@ main > div{
 }
 
 ul{
-    & li{
+    & .listitens{
         background-color: var(--bg-secondary);
         padding: .5rem .75rem;
         border-radius: .75rem;
