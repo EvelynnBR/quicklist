@@ -5,7 +5,7 @@
 }
 
 body{
-    border: solid;
+    background-color: var(--bg-primary);
 }
 
 .desktop-only{
@@ -32,6 +32,18 @@ p{
 }
 a{
     text-decoration: none;
+}
+ul[rule="list"]{
+    list-style: none;
+}
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
+}
+.gap-075{
+    gap: .75rem;
 }
 @media (width >= 80em){
     .container{
