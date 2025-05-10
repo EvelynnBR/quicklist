@@ -23,58 +23,17 @@
             </div>
             <section>
                 <div class="additens flex gap-1">
-                    <input type="text" name="item" id="item" required placeholder="Adicione um novo item">
+                    <input type="text" name="item" id="getitem" required placeholder="Adicione um novo item">
                     <button id="btn-add" class="btn-color">Adicionar item</button>
                 </div>
 
-                <ul rule="list" class="grid gap-075">
+                <ul rule="list" class="grid gap-075" id="list"></ul>
 
-                    <li class="listitens flex">
-                        <div class="checked-img">
-                            <input type="checkbox">
-                        </div>
-                        <p id="item">Pão de forma</p>
-                        <button id="delete">
-                            <img src="assets/delete.svg" alt="">
-                        </button>
-                    </li>
-
-                    <li class="listitens flex">
-                        <div class="checked-img">
-                            <input type="checkbox">
-                        </div>
-                        <p id="item">Café preto</p>
-                        <button id="delete">
-                            <img src="assets/delete.svg" alt="">
-                        </button>
-                    </li>
-
-                    <li class="listitens flex">
-                        <div class="checked-img">
-                            <input type="checkbox">
-                        </div>
-                        <p id="item">Suco de laranja</p>
-                        <button id="delete">
-                            <img src="assets/delete.svg" alt="">
-                        </button>
-                    </li>
-
-                    <li class="listitens flex">
-                        <div class="checked-img">
-                            <input type="checkbox">
-                        </div>
-                        <p id="item">Bolacha</p>
-                        <button id="delete">
-                            <img src="assets/delete.svg" alt="">
-                        </button>
-                    </li>
-                </ul>
-
-                <div id="alert">
+                <div id="alert" class="hidden">
                     <div class="alert flex">
                         <img src="assets/alert.svg" alt="">
                         <p>O item foi removido da lista</p>
-                        <button id="btn-delete">
+                        <button class="close">
                             <img src="assets/delete-small.svg" alt="">
                         </button>
                     </div>
