@@ -32,14 +32,13 @@ button.addEventListener("click", () => {
     const newText = document.createElement("p");
     const text = addItens.value;
     li.append(newText);
-    newText.append(text);
+    newText.textContent = text;
     
     // criando o delete
     const btnDelete = document.createElement("button");
     const imgDelete = document.createElement("div");
     
     li.append(btnDelete);
-    btnDelete.id = "deletelist";
     btnDelete.classList.add("btndelete");
 
     btnDelete.append(imgDelete);
@@ -50,18 +49,17 @@ button.addEventListener("click", () => {
 });
 
 // função para remover lista
-li.addEventListener("click", (event) => {
-  if (event.target.closest(".btndelete")) {
-    const item = event.target.closest(".listitens");
-    item.remove();
-  }
+ul.addEventListener("click", (event) => {
+    if (event.target.closest(".btndelete")) {
+        const item = event.target.closest(".listitens");
+        item.remove();
 
-  alertMessage.classList.remove("hidden");
+        alertMessage.classList.remove("hidden");
+    }
+
 });
 
 // função para remover a menssagem de error
-alertMessage.addEventListener("click", () => {
-    const close = alertMessage;
-
-    close.classList.add("hidden");
+close.addEventListener("click", () => {
+    alertMessage.classList.add("hidden");
 })
